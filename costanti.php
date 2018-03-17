@@ -28,9 +28,9 @@ if (BETA2) ini_set('ini.session.use-trans-sid', '1');
 
 // Parametri MySQL
 define ("DB_HOST","localhost");
-define ("DB_NAME","db-italfrutta");
-define ("DB_USER","italfrutta");
-define ("DB_PASS","ipass2013+");
+define ("DB_NAME","db-qualcuno");
+define ("DB_USER","utente");
+define ("DB_PASS","passwd");
 
 // comodità varie
 $data = date("Y-m-d");
