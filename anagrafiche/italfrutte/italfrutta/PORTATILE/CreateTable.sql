@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS `prova` (`CodProva` tinyint(3) unsigned zerofill NOT NULL AUTO_INCREMENT, `CodLav` tinyint(3) unsigned zerofill NOT NULL, `Nome` tinytext COLLATE utf8_roman_ci NOT NULL,   PRIMARY KEY (`CodProva`), FOREIGN KEY (CodLav) REFERENCES lavorazione(CodLav)) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_roman_ci AUTO_INCREMENT=27;

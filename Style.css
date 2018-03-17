@@ -1,0 +1,467 @@
+body {
+    font-family: monospace;
+}
+input[type='text'], input[type='password']{
+    font-family: monospace;
+    font-size: large;
+    font-weight: bolder;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: thin dotted;
+    background-color: #FFFACD;
+}
+input[type="text"]:disabled {
+    color: blue;
+    border: 0;
+    background: transparent;
+}
+textarea {
+    font-family: monospace;
+    font-size: medium;
+    font-weight: bold;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: thin dotted;
+    background-color: #FFFACD;
+}
+input[type='submit']{
+    font-size: xx-small;
+    font-stretch: ultra-condensed;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline red;
+}
+input.super {
+    font-family: monospace;
+    font-size: 110%;
+    font-weight: bolder;
+}
+table {
+    border-collapse: collapse;
+}
+th, tr, td {
+    border-style: solid;
+    border-width: 1px;
+}
+div {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    position: absolute;
+    background-color: whitesmoke;
+}
+small {
+    font-size: xx-small;
+    color: #2F4F4F;
+}
+.style1 {
+    text-align: center;
+}
+.style2 {
+    
+}
+.style3 {
+    font-family: Calibri;
+    font-size: x-large;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+    text-align: center;
+}
+.TestoPiccolo {
+    color: #000000;
+    font-family: Calibri;
+    font-size: small;
+    font-style: italic;
+    font-weight: bold;
+}
+.TabelleOrdini {
+    background-color: #FFFFFF;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #C0C0C0;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #C0C0C0;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.tblibera {
+    background-color: #FFFFFF;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-style: none;
+    border-top-width: 0px;
+}
+.tbgray {
+    background-color: #666;
+    border: 1px solid #666;
+}
+.TabelleOrdiniTrasporto {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #C0C0C0;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.TitoliTab {
+    font-family: Calibri;
+    font-size: medium;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+.TestoTitoli {
+    font-family: Calibri;
+    font-size: x-large;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+.FondoImmagine {
+    background-image: url('Risorse/anguriaemelone2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.UltimaRigaInserimenti {
+    text-align: left;
+}
+.Testo {
+    font-family: Calibri;
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+}
+.BordoTabella2 {
+    border-collapse: collapse;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+}
+.Testo2 {
+    color: #000000;
+    font-family: calibri;
+    font-size: medium;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.Menu {
+    font-family: Calibri;
+}
+td.menu:hover {
+    background-color: Highlight;
+}
+p.lista:hover {
+    background-color: Highlight;
+}
+.TestoTitoliGrande {
+    color: #009933;
+    font-family: Calibri;
+    font-size: 50px;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+.FondoRosso {
+    background-color: #FF0000;
+    border-width: 1;
+}
+.FondoArancio {
+    background-color: #FF9933;
+    border-width: 1;
+}
+
+.FondoVerde {
+    background-color: #33CC33;
+    border-width: 1;
+}
+.FondoGiallo {
+    background-color: #FFFF00;
+    border-width: 1;
+}
+.FondoBlu {
+    background-color: cornflowerblue;
+    border-width: 1;
+}
+.BordoTabella {
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+}
+.TestoInterno {
+    color: #000000;
+    font-family: calibri;
+    font-size: small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+/* Alert e debug *************************************************/
+.Beta {
+    border-style: solid;
+    border-width: 2px;
+    background-color: Silver;
+}
+.Beta2 {
+    border-style: dashed;
+    border-width: 1px;
+    background-color: Silver;
+}
+.Beta3 {
+    border-style: dotted;
+    border-width: 1px;
+    background-color: #FFE4C4;
+}
+.Errore {
+    color: red;
+    text-align: center;
+    text-decoration: blink;
+}
+.ErroreGrave {
+    background-color: #ff6f6f;
+    border-style: dashed;
+    border-width: thin;
+    color: black;
+    text-align: center;
+}
+.SistemaOK {
+    background-color: #00ff00;
+    border-style: dashed;
+    border-width: thin;
+    color: black;
+    text-align: center;
+}
+.SistemaAlert {
+    border-style: dashed;
+    border-width: thin;
+    color: black;
+    text-align: center;
+}
+/* Form *************************************************/
+/* 	Bottoni *************************************************/
+button {
+    font-size: xx-small;
+    font-stretch: ultra-condensed;
+}
+.btR {
+    background-color: Red;
+    font-size: xx-small;
+}
+.tR {
+    background-color: Red;
+    font-size: xx-small;
+}
+.btY {
+    background-color: Yellow;
+    font-size: xx-small;	
+}
+.tY {
+    background-color: Yellow;
+    font-size: xx-small;	
+}
+.btO {
+    background-color: #FFA500;
+    font-size: xx-small;
+}
+.tO {
+    background-color: #FFA500;
+    font-size: xx-small;
+}
+.btRR {
+    background-color: Red;
+    font-weight: bold;
+    font-size: xx-small;
+}
+.btZ {
+    border-style: none;
+    background-color: white;
+    font-weight: bold;
+    font-size: xx-small;
+}
+.tRR {
+    background-color: Red;
+    font-weight: bold;
+    font-size: xx-small;
+    transition: background 1.0s ease-in-out;
+}
+.btGY {
+    background-color: greenyellow;
+    font-size: xx-small;
+}
+.tGY {
+    background-color: greenyellow;
+    font-size: xx-small;
+}
+.btG {
+    background-color: Lime;
+    font-size: xx-small;
+}
+.tG {
+    background-color: Lime;
+    font-size: xx-small;
+}
+.btB { /* Blu */
+    background-color: #00BFFF;
+    font-size: xx-small;
+}
+.tB { /* Blu */
+    background-color: #00BFFF;
+    font-size: xx-small;
+}
+.btBlack { /* Nero */
+    background-color: black;
+    color: white;
+    font-size: xx-small;
+}
+.tBlack { /* Nero */
+    background-color: black;
+    color: white;
+    font-size: xx-small;
+}
+.btLilla {
+    background-color: #DDA0DD;
+    font-size: xx-small;
+}
+.tLilla {
+    background-color: #DDA0DD;
+    font-size: xx-small;
+}
+.tW {
+    /* White (W) */
+    background-color: white;
+    font-size: larger;
+}
+.tBl {     /* Black (Bl) */
+    background-color: black;
+    font-size: xx-small;
+}
+.tWo {
+    /* White (W) */
+    background-color: whitesmoke;
+    font-size: xx-small;
+    /* opacity:.10; */
+}
+.tN {
+    background-color: #000000;
+    font-size: xx-small;
+}
+/*		Textaree e input */
+.tx{
+
+}
+.class2blink{
+    background-color: lightpink;
+    /*
+    animation: blink 3s steps(5, start) infinite;
+    -webkit-animation: bgblink 3s;  
+    -webkit-animation-iteration-count: infinite; 
+    
+    -moz-animation-name: bgblink;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    */
+}
+@-webkit-keyframes bgblink {
+    from {background-color: lightsteelblue;}
+    /*50% {color:#fff}*/
+    to {background-color: lightpink;}
+}
+@keyframes bgblink {
+    from {background-color: lightsteelblue;}
+    /*50% {background-color:#fff}*/
+    to {background-color: lightpink;}
+}
+@-moz-keyframes bgblink {
+    from {background-color: lightsteelblue;}
+    /*50% {background-color:#fff}*/
+    to {background-color: lightpink;}
+}
+.xclass2blink {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+#ope {
+    font-style: normal;
+    font-size: larger;
+    font-family: sans-serif;
+    font-size: 130%;
+    /* background-color: Black; */
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+#opex {
+    font-style: normal;
+    font-size: larger;
+    font-family: sans-serif;
+    font-size: 130%;
+    /* background-color: Black; */
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+.lista {
+    font-weight: bold;
+    font-size: large;
+    color: black;
+}
+.wonb {
+    color: white;
+    background-color: black;
+}
+
+.vuota {
+	background-color: #FFFFFF;
+	border: none;
+}

@@ -1,0 +1,94 @@
+
+.style1 {
+	text-align: center;
+}
+.TestoPiccolo {
+	font-family: Calibri;
+	font-size: small;
+	color: #000000;
+	font-style: italic;
+	font-weight: bold;
+}
+.TabelleOrdini {
+	border-left: 1px solid #C0C0C0;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top: 1px solid #C0C0C0;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+.TitoliTab {
+	font-family: Calibri;
+	font-size: medium;
+	font-weight: normal;
+	font-style: italic;
+	text-decoration: underline;
+	text-align: center;
+}
+.TestoTitoli {
+	font-family: Calibri;
+	font-size: x-large;
+	font-style: italic;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+.FondoRosso {
+	border-width: 0;
+	background-color: #FF0000;
+}
+.FondoImmagine {
+	background-image: url('Risorse/anguriaemelone2.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.UltimaRigaInserimenti {
+	text-align: left;
+}
+.Testo {
+	font-family: Calibri;
+	font-size: large;
+	font-weight: bold;
+	font-style: italic;
+}
+.BordoTabella2 {
+	border-collapse: collapse;
+	border: 1px solid #000000;
+}
+.Testo2 {
+	font-family: calibri;
+	font-size: medium;
+	font-weight: normal;
+	font-style: italic;
+	color: #000000;
+	text-align: center;
+}
+.Menu {
+	font-family: Calibri;
+}
+.TestoTitoliGrande {
+	font-family: Calibri;
+	font-size: 50px;
+	font-style: italic;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #009933;
+}
+.FondoArancio {
+	border-width: 0;
+	background-color: #FF9933;
+}
+.FondoVerde {
+	border-width: 0;
+	background-color: #33CC33;
+}
+.BordoTabella {
+	border: 1px solid #000000;
+}
+.TestoInterno {
+	font-family: calibri;
+	font-size: small;
+	font-weight: normal;
+	font-style: italic;
+	color: #000000;
+	text-align: center;
+}

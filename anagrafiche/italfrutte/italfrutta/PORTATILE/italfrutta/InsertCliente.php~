@@ -1,0 +1,44 @@
+<?
+//connessione al DB
+$db = mysql_connect("localhost","root","")or die("Connessione non riuscita: " . mysql_error());
+   echo ("Connesso con successo");
+mysql_select_db("Italfrutta", $db) or die("Errore nella selezione del database"); 
+
+	echo("<br>fino a qui tutto ok"); 
+
+/*Query per l'inserimento dei dati*/
+$nome = $_GET['Cliente'];
+echo ($nome);
+
+/*Controllo che il Cliente inserito non sia presente*/
+
+$controllo="SELECT NomeCliente From Cliente WHERE NomeCliente=$nome"; 
+$ricerca=mysql_query($controllo);
+echo("<br>risultato della select" $ricerca);
+
+if (!$ricerca) 
+	{/*Query per l'inserimento dei dati*/
+	$inser = "INSERT INTO cliente (NomeCliente)
+	       	       VALUES ('$nome')";
+   	echo("<br>risultato della insert" $inser); 
+
+	if (isset($Inserisci)) echo("<br>Sono qui!");
+            $query = mysql_query($inser);  	echo("<br>esecuzione query"); //esecuzione query
+            if($query)
+       	     	echo("<br>Inserimento riuscito"); 
+            else
+                echo("<br>Inserimento fallito"); }
+ else echo ("<br>Cliente già presente in anagrafica");
+
+
+
+$close=mysql_close($db);
+/*manca controllo di chiusura*/
+?>
+
+
+
+
+
+              
+ 

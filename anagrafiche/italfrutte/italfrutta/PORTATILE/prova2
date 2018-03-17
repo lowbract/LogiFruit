@@ -1,0 +1,69 @@
+
+------creazione tabella prodotti senza FOREIGN KEY CodOrdine------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `prodotto` (
+  `CodProd` int(100) NOT NULL AUTO_INCREMENT,
+  `NomeProd` char(250) COLLATE utf8_roman_ci NOT NULL,
+  `Colli` int(5) NOT NULL,
+  `CodLav` tinyint(3) unsigned zerofill NOT NULL,
+  `CodPez` tinyint(3) unsigned zerofill NOT NULL,
+  `CodImb` tinyint(3) NOT NULL,
+  `CodPallet` tinyint(3) NOT NULL,
+  `CodOrd` int(10) NOT NULL,
+  `vuoto1` tinyint(3),
+  `vuoto2` tinyint(3),
+  PRIMARY KEY (`CodProd`),
+  FOREIGN KEY (`CodPez`) REFERENCES pezzatura (`CodPez`),
+  FOREIGN KEY (`CodOrd`) REFERENCES ordine (`CodOrd`),
+  FOREIGN KEY (`CodImb`) REFERENCES imballo (`CodImb`), 
+  FOREIGN KEY (`CodPallet`) REFERENCES pallet (`CodPallet`),
+  FOREIGN KEY (`CodLav`) REFERENCES lavorazione (`CodLav`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_roman_ci AUTO_INCREMENT=1 ;
+
+------creazione tabella autista -----------------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `autista` (
+  `CodAut` tinyint(3) NOT NULL AUTO_INCREMENT,
+  `Nome` char(20) NOT NULL,
+  `Cognome` char(20) NOT NULL,
+  `Telefono1` char(15),
+  `Telefono2` char(15),
+  `CodVett` tinyint(3) NOT NULL,
+  PRIMARY KEY (`CodAut`),
+  FOREIGN KEY (`CodVett`) REFERENCES vettore (`CodVett`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_roman_ci AUTO_INCREMENT=1 ;
+
+
+------creazione tabella autista -----------------------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `ordine` (
+  `CodOrd` int(10) NOT NULL AUTO_INCREMENT,
+  `Commenti` char(30),
+  `data` date NOT NULL,
+  `OraPartenza` time NOT NULL,
+  `Modificato` boolean not null default 0,
+  `CodTrasp` tinyint(3) NOT NULL,
+  `CodCliente` tinyint(3) unsigned zerofill NOT NULL,
+  PRIMARY KEY (`CodOrd`),
+  FOREIGN KEY (`CodTrasp`) REFERENCES trasporto (`CodTrasp`),
+  FOREIGN KEY (`CodCliente`) REFERENCES cliente (`CodCliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_roman_ci AUTO_INCREMENT=1 ;
+
+------creazione tabella trasporto -----------------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `trasporto` (
+  `CodTrasp` tinyint(3) NOT NULL AUTO_INCREMENT,
+  `Portata` char(20),
+  `SeqCarico` char(20),
+  `Arrivato` char(5),
+  `CodVett` tinyint(3) unsigned NOT NULL,
+  `CodAut` tinyint(3) NOT NULL,
+  PRIMARY KEY (`CodTrasp`),
+  FOREIGN KEY (`CodVett`) REFERENCES vettore (`CodVett`),
+  FOREIGN KEY (`CodAut`) REFERENCES autista (`CodAut`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_roman_ci AUTO_INCREMENT=1 ;
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+

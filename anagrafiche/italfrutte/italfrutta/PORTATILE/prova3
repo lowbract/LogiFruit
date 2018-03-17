@@ -1,0 +1,120 @@
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `autista`
+--
+
+CREATE TABLE IF NOT EXISTS `autista` (
+  `CodAut` tinyint(3) NOT NULL AUTO_INCREMENT,
+  `Nome` char(20) COLLATE utf8_roman_ci NOT NULL,
+  `Cognome` char(20) COLLATE utf8_roman_ci NOT NULL,
+  `Telefono1` char(15) COLLATE utf8_roman_ci DEFAULT NULL,
+  `Telefono2` char(15) COLLATE utf8_roman_ci DEFAULT NULL,
+  `CodVett` tinyint(3) NOT NULL,
+  PRIMARY KEY (`CodAut`),
+  KEY `CodVett` (`CodVett`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_roman_ci AUTO_INCREMENT=1 ;
+
+
+CREATE TABLE IF NOT EXISTS `autista` (
+  `CodAut` tinyint(3) NOT NULL AUTO_INCREMENT,
+  `Nome` char(20) COLLATE utf8_roman_ci NOT NULL,
+  `Cognome` char(20) COLLATE utf8_roman_ci DEFAULT NULL,
+  `Telefono1` char(15) COLLATE utf8_roman_ci DEFAULT NULL,
+  `Telefono2` char(15) COLLATE utf8_roman_ci DEFAULT NULL,
+  PRIMARY KEY (`CodAut`),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_roman_ci AUTO_INCREMENT=1 ;
+
+
+
+
+
+
+--
+-- Struttura della tabella `ordine`
+--
+
+CREATE TABLE IF NOT EXISTS `ordine` (
+  `CodOrd` int(10) NOT NULL AUTO_INCREMENT,
+  `Commenti` char(30) COLLATE utf8_roman_ci DEFAULT NULL,
+  `data` date NOT NULL,
+  `OraPartenza` time NOT NULL,
+  `Modificato` tinyint(1) NOT NULL DEFAULT '0',
+  `CodVett` tinyint(3) NOT NULL,
+  `CodCliente` tinyint(3) unsigned zerofill NOT NULL,
+  PRIMARY KEY (`CodOrd`),
+  KEY `CodVett` (`CodVett`),
+  KEY `CodCliente` (`CodCliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_roman_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `prodotto`
+--
+
+CREATE TABLE IF NOT EXISTS `prodotto` (
+  `CodProd` int(100) NOT NULL AUTO_INCREMENT,
+  `NomeProd` char(250) COLLATE utf8_roman_ci NOT NULL,
+  `Colli` int(5) NOT NULL,
+  `CodLav` tinyint(3) unsigned zerofill NOT NULL,
+  `CodPez` tinyint(3) unsigned zerofill NOT NULL,
+  `CodImb` tinyint(3) NOT NULL,
+  `CodPallet` tinyint(3) NOT NULL,
+  `CodOrd` int(10) NOT NULL,
+  `vuoto1` tinyint(3) DEFAULT NULL,
+  `vuoto2` tinyint(3) DEFAULT NULL,
+  PRIMARY KEY (`CodProd`),
+  KEY `CodPez` (`CodPez`),
+  KEY `CodOrd` (`CodOrd`),
+  KEY `CodImb` (`CodImb`),
+  KEY `CodPallet` (`CodPallet`),
+  KEY `CodLav` (`CodLav`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_roman_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `vettore`
+--
+
+CREATE TABLE IF NOT EXISTS `vettore` (
+  `CodVett` tinyint(3) NOT NULL AUTO_INCREMENT,
+  `Portata` char(12) COLLATE utf8_roman_ci NOT NULL,
+  `Arrivato` char(12) COLLATE utf8_roman_ci NOT NULL,
+  `SeqCarico` char(12) COLLATE utf8_roman_ci NOT NULL,
+  `Note` char(50) COLLATE utf8_roman_ci NOT NULL,
+  `data` date NOT NULL,
+  `OraPartenza` time NOT NULL,
+  PRIMARY KEY (`CodVett`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_roman_ci AUTO_INCREMENT=1 ;
+
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `autista`
+--
+ALTER TABLE `autista`
+  ADD CONSTRAINT `autista_ibfk_1` FOREIGN KEY (`CodVett`) REFERENCES `vettore` (`CodVett`);
+
+--
+-- Limiti per la tabella `ordine`
+--
+ALTER TABLE `ordine`
+  ADD CONSTRAINT `ordine_ibfk_1` FOREIGN KEY (`CodVett`) REFERENCES `vettore` (`CodVett`),
+  ADD CONSTRAINT `ordine_ibfk_2` FOREIGN KEY (`CodCliente`) REFERENCES `cliente` (`CodCliente`);
+
+--
+-- Limiti per la tabella `prodotto`
+--
+ALTER TABLE `prodotto`
+  ADD CONSTRAINT `prodotto_ibfk_1` FOREIGN KEY (`CodPez`) REFERENCES `pezzatura` (`CodPez`),
+  ADD CONSTRAINT `prodotto_ibfk_2` FOREIGN KEY (`CodOrd`) REFERENCES `ordine` (`CodOrd`),
+  ADD CONSTRAINT `prodotto_ibfk_3` FOREIGN KEY (`CodImb`) REFERENCES `imballo` (`CodImb`),
+  ADD CONSTRAINT `prodotto_ibfk_4` FOREIGN KEY (`CodPallet`) REFERENCES `pallet` (`CodPallet`),
+  ADD CONSTRAINT `prodotto_ibfk_5` FOREIGN KEY (`CodLav`) REFERENCES `lavorazione` (`CodLav`);
+
+
