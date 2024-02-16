@@ -12,7 +12,7 @@ mysql_select_db(DB_NAME, $db) or die("Errore nella selezione del database");
 
 // PDO connessione a db Ital-Frutta
 function connetti() {
-    return new PDO('mysql:host=localhost;dbname=db-italfrutta', 'italfrutta', 'ipass2013+', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    return new PDO('mysql:host=localhost;dbname=db-pippofrutta', 'pippofrutta', 'password123!', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 }
 
 /* esempio di utilizzo del PDO
